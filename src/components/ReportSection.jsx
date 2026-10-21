@@ -50,7 +50,7 @@ export default function ReportSection() {
               </div>
               <a
                 className="channel-link"
-                href="https://www.gov.br/mdh/pt-br/canais_atendimento/disque-100"
+                href="https://www.gov.br/pt-br/servicos/denunciar-violacao-de-direitos-humanos"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -1,34 +1,20 @@
 import { useRef, useState, useEffect } from 'react'
 import { ShieldIcon, AlertChatIcon, LockIcon, FamilyIcon, ReportFlagIcon } from './icons.jsx'
+import img1 from '../img/img1.jpg'
+import img2 from '../img/img2.jpg'
+import img3 from '../img/img3.jpg'
 
 
-// Troque "icon" por "src: '/images/seu-arquivo.jpg'" quando tiver imagens reais.
-// O componente Slide já sabe renderizar os dois formatos.
+
 const slides = [
   {
-    icon: FamilyIcon,
-    title: 'Prevenção é a primeira barreira',
-    caption: 'Conhecer o processo do aliciamento reduz o tempo de exposição ao risco.',
+    src: img1,
   },
   {
-    icon: FamilyIcon,
-    title: 'Nem toda conversa "gentil" é inocente',
-    caption: 'Excesso de elogios e interesse repentino merecem atenção, não pânico.',
+    src: img2,
   },
   {
-    icon: FamilyIcon,
-    title: 'Privacidade não é sigilo forçado',
-    caption: 'Pedidos para "não contar pra ninguém" são, em si, um sinal de alerta.',
-  },
-  {
-    icon: FamilyIcon,
-    title: 'Diálogo aberto em casa',
-    caption: 'Crianças que sabem que não serão julgadas contam mais cedo o que viveram.',
-  },
-  {
-    icon: ReportFlagIcon,
-    title: 'Denunciar interrompe o ciclo',
-    caption: 'Cada denúncia registrada ajuda a identificar padrões e agir mais rápido.',
+    src: img3,
   },
 ]
 
@@ -38,9 +24,9 @@ function Slide({ slide }) {
     <div className="carousel-slide">
       {slide.src ? (
         <img
+          className="carousel-image"
           src={slide.src}
           alt={slide.title}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
       ) : (
         <Icon />
@@ -93,11 +79,10 @@ export default function Carousel() {
     <section className="section carousel-section" id="galeria">
       <div className="container">
         <span className="eyebrow">Material de apoio</span>
-        <h2>Imagens e ilustrações da campanha</h2>
+        <h2>Imagens e ilustrações de como pode acontecer</h2>
         <p className="intro" style={{ marginTop: '14px', maxWidth: 'var(--measure)', color: 'var(--ink-soft)' }}>
-          Este espaço foi pensado para receber as artes finais do projeto — cartazes, ilustrações
-          das etapas do aliciamento ou fotos de campanha. Por enquanto, cada slide traz um ícone
-          de referência para o funcionamento do carrossel.
+          Este espaço foi pensado para receber ilustrações
+          das etapas do aliciamento.
         </p>
 
         <div className="carousel-wrap">

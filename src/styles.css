@@ -32,6 +32,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   * {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
@@ -48,7 +49,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.12;
@@ -224,8 +227,17 @@ button {
 }
 
 @keyframes pulse-dash {
-  0%, 100% { width: 22px; opacity: 0.4; }
-  50% { width: 34px; opacity: 0.9; }
+
+  0%,
+  100% {
+    width: 22px;
+    opacity: 0.4;
+  }
+
+  50% {
+    width: 34px;
+    opacity: 0.9;
+  }
 }
 
 /* ---------- Info section (como acontece / IA / combater) ---------- */
@@ -236,7 +248,7 @@ button {
   max-width: 760px;
 }
 
-.info-block + .info-block {
+.info-block+.info-block {
   margin-top: 64px;
 }
 
@@ -345,6 +357,14 @@ button {
   padding: 24px;
   position: relative;
   overflow: hidden;
+}
+
+.carousel-slide .carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .carousel-slide svg {
@@ -601,6 +621,7 @@ button {
   .chat-messages {
     max-height: 360px;
   }
+
   .chat-input-row {
     flex-direction: column;
     align-items: stretch;
